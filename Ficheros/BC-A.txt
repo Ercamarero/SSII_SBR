@@ -1,0 +1,6 @@
+5
+R1: Si I y ND Entonces CB, FC=1
+R2: Si NI y CV Entonces I, FC=0.8
+R3: Si NF y NEC Entonces ND, FC=0.5
+R4: Si E Entonces ND, FC=-0.8
+R5: Si SSII Entonces ND, FC=1
