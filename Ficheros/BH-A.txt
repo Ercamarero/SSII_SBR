@@ -1,0 +1,9 @@
+6
+CV, FC=0.5
+NI, FC=0.3
+SSII, FC=1
+NF, FC=1
+NEC, FC=0
+E, FC=0.5
+Objetivo
+CB
