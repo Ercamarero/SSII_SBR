@@ -1,0 +1,9 @@
+Regla activada R5
+	Caso 1: visitanteRM^les2pivRM, 1.000000
+	Caso 3: ganaRM, -0.100000
+Regla activada R3
+	Caso 3: ganaRM, -0.260000
+Regla activada R2
+	Caso 3: ganaRM, 0.750000
+Caso 2: ganaRM, 0.624625
+ganaRM 0.624625

@@ -1,0 +1,8 @@
+Regla activada R6
+	Caso 3: ganaEST, -0.600000
+Regla activada R4
+	Caso 3: ganaEST, -0.192500
+Regla activada R1
+	Caso 3: ganaEST, 0.400000
+Caso 2: ganaEST, -0.461667
+ganaEST -0.461667
