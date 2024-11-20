@@ -6,4 +6,3 @@ R4: Si M3H Entonces C, FC=1
 R5: Si E y NS Entonces A, FC=-0.5
 R6: Si C Entonces A, FC=0.5
 R7: Si J y B Entonces A, FC=0.7
-

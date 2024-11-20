@@ -1,0 +1,6 @@
+3
+W, FC=1
+G, FC=1
+S, FC=0.5
+Objetivo
+R

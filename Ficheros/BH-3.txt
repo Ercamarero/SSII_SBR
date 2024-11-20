@@ -1,10 +1,10 @@
-4
+7
 J, FC=0.4
-2-3A, FC=1
-M3A, FC=-1
-2-3H, FC=-1
-M3H, FC=1
-B, FC=0.5
+2-3A, FC=-1
+M3A, FC=1
+M3H, FC=-1
+2-3H, FC=1
+B, FC=-1
 NS, FC=-1
 Objetivo
 A

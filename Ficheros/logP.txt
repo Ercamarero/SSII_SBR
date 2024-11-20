@@ -1,0 +1,9 @@
+Regla activada R2
+	Caso 1: S^G, 1.000000
+	Caso 3: A, 0.450000
+Regla activada R1
+	Caso 3: A, 0.500000
+Caso 2: A, 0.725000
+Regla activada R3
+	Caso 3: R, 0.725000
+R 0.725000
