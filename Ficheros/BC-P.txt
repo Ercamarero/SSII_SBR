@@ -1,4 +1,4 @@
 3
 R1: Si W Entonces A, FC=0.5
 R2: Si G y S Entonces A, FC=0.9
-R3: Si A Entonces R, FC=1
+R3: Si A Entonces R, FC=0.99

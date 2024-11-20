@@ -1,9 +1,10 @@
 6
 CV, FC=0.5
-NI, FC=0.3
-SSII, FC=1
-NF, FC=1
+NI, FC=-0.5
+P, FC=1
+NF, FC=0.7
 NEC, FC=0
 E, FC=0.5
+I, FC=0
 Objetivo
 CB
