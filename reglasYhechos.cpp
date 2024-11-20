@@ -7,20 +7,20 @@ bool fLog= false;
 FILE * loge = stdout;
 
 //Habilitar la escritura en log
-void enable_log()
+void logEnabled()
 {
     fLog = true;
     loge = fopen(LOGNAME, "w");
 }
 
 //Escribir en el log de forma externa
-void write_in_log(string s)
+void writeLog(string s)
 {
     fprintf(loge,"%s\n",s.c_str());
 }
 
 //Cerrar la escritura en log
-void disable_log()
+void closeLog()
 {
     if(fLog)
     {
@@ -48,23 +48,25 @@ double min(double a, double b)
 //Fin de funciones auxiliares
 
 //Caso 2 si a y b son positivos
-double gt0(double a, double b)
+double case2plus(double a, double b)
 {
     return a+b*(1-a);
 }
 
 //Caso 2 si a y b son negativos
-double lt0(double a, double b)
+double case2minus(double a, double b)
 {
     return a+b*(1+a);
 }
 
 //Caso 2 si a y b tienen distinto signo
-double other(double a, double b)
+double case2Mix(double a, double b)
 {
     return (a+b)/(1-min(absol(a),absol(b)));
 }
 
+
+//Constructor de Regla estandar Base Conocimientos 
 regla::regla(string nombre, double factor, bool tipo)
 {
     this->nombre = nombre;
@@ -76,6 +78,7 @@ regla::regla(string nombre, double factor, bool tipo)
     this->tipob=tipo;
 }
 
+//Contructor de regla contando con hechos atribuidos
 regla::regla(string nombre, double factor, bool tipo, list<hecho*> hechos)
 {
     this->nombre = nombre;
@@ -88,21 +91,25 @@ regla::regla(string nombre, double factor, bool tipo, list<hecho*> hechos)
     this->tipob=tipo;
 }
 
+//Destructor 
 regla::~regla()
 {
 
 }
 
+//Gestor de < 
 bool regla::operator<(const regla otro) const
 {
     return this->nombre<otro.nombre;
 }
 
+//Gestor de == 
 bool regla::operator==(const regla otro) const
 {
     return this->nombre == otro.nombre;
 }
 
+//Introductor de hechos a una regla 
 void regla::addHecho(hecho* hecho)
 {
     this->hechos.push_front(hecho);
@@ -237,9 +244,9 @@ double hecho::resolver(map<hecho*, double> mapa)
         //Se resuleve la regla y se guarda en b
         b=(*it)->resolver(mapa,this->nombre);
         //Dependiendo de los valores de los fcs obtenidos seleccionamos la función correcta a aplicar
-        if(fc>=0 && b>=0) funRet=gt0;
-        else if(fc<=0 && b<=0) funRet=lt0; 
-        else funRet=other;
+        if(fc>=0 && b>=0) funRet=case2plus;
+        else if(fc<=0 && b<=0) funRet=case2minus; 
+        else funRet=case2Mix;
         //Se realiza
         fc = funRet(fc,b);
         //Se itera

@@ -13,13 +13,13 @@
 using namespace std;
 
 //Habilita la salida por fichero log
-void enable_log();
+void logEnabled();
 
 //Escribe en el log
-void write_in_log(string s);
+void writeLog(string s);
 
 //Deshabilita la salida por fichero log
-void disable_log();
+void closeLog();
 
 class hecho;
 

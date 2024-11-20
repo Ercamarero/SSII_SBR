@@ -37,7 +37,7 @@ int main(int argc, char * argv[])
     map<hecho*,double> mapa = map <hecho*,double>();
     hecho objetivo = inicializar(mapa, argv[1], argv[2]);
     //Abrimos el log
-    enable_log();
+    logEnabled();
     //Obtenemos el fc del hecho objetivo (Ejecutamos el algoritmo)
     double fc = objetivo.resolver(mapa);
     //Mostramos por pantalla
@@ -45,9 +45,9 @@ int main(int argc, char * argv[])
     string s = "";
     s+=objetivo.getNombre()+" "+to_string(fc);
     //Lo escribimos en el log
-    write_in_log(s);
+    writeLog(s);
     //Cerramos el log
-    disable_log();
+    closeLog();
     //Liberamos memoria
     for(set<hecho* >::iterator it= borrarHechos.begin();it==borrarHechos.end();it++)
         delete *it;
